@@ -1,0 +1,173 @@
+body{
+	margin:0;
+	padding:0;
+	background-image: url("C:/Users/DELL/Downloads/bg1.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	
+	
+	
+}
+
+
+*{
+	font-family:Aclonica;
+	
+}
+header a:hover{
+	background: rgb(7, 178, 190);
+    color: rgb(2, 32, 34);
+    transition: 0.3s;
+}
+.logo{
+	margin-bottom:10px;
+}
+nav{
+	width:100vw;
+	min-height:8vh;
+	max-height:13vh;
+	display: flex;
+	background:black;
+	float: right;
+	
+}
+.funimg{
+	box-sizing: border-box;
+    height:100%;
+	background-image:url("C:/Users/DELL/Downloads/bg1.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	margin-top:2vh;
+    border:6px solid yellow;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+.fun{
+	right: 10%;
+	text-shadow:4px 4px #F72119;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	font-size:2.2em
+	
+	
+}
+
+.navitem{
+	margin-top:1vh;
+	padding:1.2vw;
+	font-size:auto;
+	color:white;
+}
+
+
+
+.section{
+	
+	color:rgb(0, 0, 0);
+	font-size-adjust:auto;
+	margin-left:150px;  
+    margin-right:150px; 
+}
+.sec{
+	font-size:1.6em;
+}
+
+.pages{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+footer{
+    background: #343a40;
+    color: #686868;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top:10px;
+    left: 0px;
+}
+header{
+	background:rgb(44, 43, 43);
+	height: 66px;
+	
+  }
+  
+  header *{
+	color: white;
+  }
+  
+  header .logo{
+	float: left;
+	margin-left: 1em;    
+  }
+  
+  header ul{
+	float: right;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+  }
+  
+  header .menu-toggle{
+	display: none;
+  }
+  
+  header ul li{
+	float: left;
+	position: relative;
+  }
+  
+  header ul li a{
+	display:block;
+	padding :21px;
+	font-size: 1.1rem;
+	text-decoration: none;
+  }
+  
+  header ul li a.logout:hover{
+	color: red;
+  }
+  
+  header ul li a:hover{
+	background: rgb(7, 178, 190);
+	color: rgb(2, 32, 34);
+	transition: 0.3s;
+  }
+  
+  
+  .amaze,.wow{
+	color:aqua;
+  }
+  
+  @media only screen and (max-width:750px){
+	
+  
+	header ul{
+		width:100%;
+		background: #ffbac8;
+		
+		
+	}
+	header ul li{
+		width: 100%;
+	}
+  
+	header .menu-toggle{
+		display: block;
+		position:absolute;
+		right: 20px;
+		top:20px;
+		font-size: 1.9rem;
+	}
+  
+	header .logo{
+		margin-left: .8em;
+	}
+  
+	header .logo-text{
+		font-size: .9em;
+	}
+  }
+	

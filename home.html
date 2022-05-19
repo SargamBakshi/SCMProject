@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reuse Factory</title>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body style="height: 752px;" >
+  <div style="background-image: url('recycle.jpg');width: 100%;height: 100%;">
+    <header>
+      <div class="logo">
+        <span class="amaze" style="font-size: 50px;">Re</span><span style="font-size: 45px;"> use</span> &emsp; <span class="wow" style="font-size: 50px; color: aqua;">Fac</span> <span style="font-size: 45px;">tory</span> <img src="leaf.jpg" height="35px" width="40px" style="margin-bottom: 50px;">
+      </div>
+      <i class="fa fa-bars menu-toggle"></i>
+      <ul class="nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="new.html">Blog </a></li>
+          <li><a href="funtodo.html">Fun To Do</a></li>
+          <li><a href="project1.html">Available waste ideas</a></li>
+          <li><a href="reviewspage.html">Reviews</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="aqi.html">AQI</a>
+         
+          <li><a href="login.html" class="login">Login</a></li>
+      </ul>
+    </header>
+
+    <div class="grid-container"  >
+      <div class="grid-item" style="margin-left:-50px;">
+        <div style="float: left;">
+          <div class="escape"><h1>Reuse Factory</h1></div> <br>
+          <div class="together"> 
+            <span class="change">Together we can bring<br> the change!</span>
+          </div><br>
+          <div class="container">
+            <button class="btn" style="margin-left: -100%;">Get Started</button>
+            
+          </div>
+        </div>
+    
+      </div>
+      <div class="grid-item">
+        <form class="w3-container"  >
+          <p>
+          <label>Your Name</label>
+          <input class="w3-input" id="yourName" type="text" autocomplete="off"></p>
+          <p>
+          <label>Enter Item</label>
+          <input class="w3-input" id="yourItem" type="text" autocomplete="off"></p>
+          <div class="select">
+            <select id="ddlViewBy">
+              <option value="1" selected="selected">Recycle</option>
+              <option value="2">Reuse</option>
+            </select>
+          </div>
+        </form>
+        <div class="sub-main">
+          <button class="button-three" onclick="myFunction()"> Submit</button>
+        </div>
+   <center><p id="demo"></p></center>
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+  
+
+</body>        
+
+</html>
+<script>
+
+  function myFunction(){
+    var name = document.getElementById("yourName").value 
+    var item = document.getElementById("yourItem").value
+    var e = document.getElementById("ddlViewBy");
+    console.log(e.selectedIndex)
+    var selectedOption = e.options[e.selectedIndex].text;
+
+    var allItemsArr=['plastic bags', 'milk cartons', 'plastic water bottles', 'old clothes', 'newspapers', 'rubber bands', 'aluminium foil', 'old jars', 'books', 'old tires', 'old paper', 'glass jars','cardboard', 'crayons', 'pencils', 'pens', 'toothbrush', 'toothpaste','razors','aluminium cans','steel cans','tea bags','coffee cans', 'egg cartons', 'food scraps', 'jars', 'empty deodrants','sunglass case', 'toys', 'cereal bags', 'cassette cases', 'dryer sheets']
+
+    var recycle = ['plastic bags', 'milk cartons', 'plastic water bottles', 'old clothes', 'newspapers', 'rubber bands', 'aluminium foil', 'old jars', 'books', 'old tires', 'old paper', 'glass jars','cardboard', 'crayons', 'pencils', 'pens', 'toothbrush', 'toothpaste','razors','aluminium cans','steel cans'] 
+
+    var reuse = ['tea bags','coffee cans', 'egg cartons', 'food scraps', 'jars', 'empty deodrants','sunglass case', 'toys', 'cereal bags', 'cassette cases', 'dryer sheets']
+
+    var checkitem = item.toLowerCase()
+    var str = ""
+    
+    for(var j=0;j<allItemsArr.length;j++){
+      if(allItemsArr[j]==checkitem){
+        if(selectedOption =="Recycle"){
+          for(var i=0;i<recycle.length;i++){
+            if(recycle[i]==checkitem){
+              str = " you can "
+              break;
+            }else{
+              str = " you can not "
+            }
+          }
+        }else{
+          for(var i=0;i<reuse.length;i++){
+            if(reuse[i]==checkitem){
+              str = " you can "
+              break;
+            }else{
+              str = " you can not "
+            }
+          }
+        }
+       document.getElementById("demo").innerHTML = "Hi "+ name + str +selectedOption+" your item "+ item ;
+        break;
+      }else{
+        document.getElementById("demo").innerHTML = "Hi "+name + ", We do not have information about your item "+ item;
+      }
+    }
+    if(item==""){
+      document.getElementById("demo").innerHTML = "Hi "+name + ", Please enter an item";
+    }
+    
+
+    // document.getElementById("demo").innerHTML = "Hi "+ name + str +selectedOption+" your item "+ item ;
+}
+  
+  
+</script>
+
